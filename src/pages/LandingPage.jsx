@@ -1,97 +1,76 @@
 import React from 'react';
-import "../components/styles/page.css";
+import "../components/styles/HomePage.css";
 
 const LandingPage = () => {
-
-    const featuredCandles = [
+    const candles = [
         {
             id: 1,
             name: "Lavender Dreams",
             description: "Soothing lavender scent to calm your senses",
             price: 14.99,
-            image: "/images/lavender-candle.jpg"
+            image: "../src/assets/lavender.png"
         },
         {
             id: 2,
             name: "Woodland Retreat",
             description: "Earthy pine and cedar forest fragrance",
             price: 16.99,
-            image: "/images/woodland-candle.jpg"
+            image:"../src/assets/woodland.png"
         },
         {
             id: 3,
             name: "Coastal Breeze",
             description: "Fresh ocean and sea salt aromatherapy",
             price: 15.99,
-            image: "/images/coastal-candle.jpg"
+            image: "../src/assets/breeze.webp"
         },
         {
             id: 4,
             name: "Warm Vanilla Comfort",
             description: "Rich, sweet vanilla bean essence",
             price: 13.99,
-            image: "/images/vanilla-candle.jpg"
+            image: "../src/assets/vanilla.png"
         }
     ];
 
     return (
-        <div className="min-h-screen bg-white">
+        <div className="page">
 
-            {/* Navigation */}
-            {/* <nav className="bg-amber-100 p-4 shadow-md">
-                <div className="container mx-auto flex justify-between items-center">
-                    <div className="text-2xl font-bold text-amber-800">Candlelight Creations</div>
-                    <div className="space-x-4">
-                        <a href="#products" className="text-amber-700 hover:text-amber-900 transition-colors">Products</a>
-                        <a href="#about" className="text-amber-700 hover:text-amber-900 transition-colors">About</a>
-                        <a href="#contact" className="text-amber-700 hover:text-amber-900 transition-colors">Contact</a>
-                    </div>
-                </div>
-            </nav> */}
+             
+            
 
             {/* Hero Section */}
-            <header className="bg-amber-50 py-20 text-center">
-                <h1 className="text-4xl font-bold text-amber-900 mb-4">Handcrafted Candles for Every Mood</h1>
-                <p className="text-xl text-amber-700 mb-8">Discover our artisan candles that transform your space</p>
-                <div className="flex justify-center mb-8">
-        <img
-            src="../src/assets/logo.png"
-            alt="Hoarding Board"
-            className="w-full max-w-3xl rounded-lg shadow-lg"
-        />
-    </div>
+            <header className="hero">
+                <h1 className="hero-title">Handcrafted Candles for Every Mood</h1>
+                <p className="hero-sub">Discover our artisan candles that transform your space</p>
+                <div className="logo-box">
+                     
+                </div>
                 <button
                     onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="bg-amber-600 text-white px-6 py-3 rounded-full hover:bg-amber-700 transition-all"
+                    className="btn-primary"
                 >
                     Shop Now
                 </button>
             </header>
 
-            {/* Featured Candles */}
-            <section id="products" className="container mx-auto py-16">
-                <h2 className="text-3xl font-bold text-center mb-10">Our Featured Collection</h2>
-                <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {featuredCandles.map((candle) => (
-                        <div
-                            key={candle.id}
-                            className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-transform transform hover:scale-105"
-                        >
-                            <img
-                                src={candle.image}
-                                alt={candle.name}
-                                className="w-full h-64 object-cover"
-                            />
-                            <div className="p-4">
-                                <h3 className="text-xl font-semibold text-amber-900">{candle.name}</h3>
-                                <p className="text-amber-700 mb-2">{candle.description}</p>
-                                <div className="flex justify-between items-center">
-                                    <span className="text-lg font-bold text-amber-800">${candle.price}</span>
+            {/* Featured Products */}
+            <section id="products" className="products">
+                <h2 className="section-title">Our Featured Collection</h2>
+                <div className="grid-box">
+                    {candles.map((candle) => (
+                        <div key={candle.id} className="card">
+                            <img src={candle.image} alt={candle.name} className="card-img" />
+                            <div className="card-body">
+                                <h3 className="card-title">{candle.name}</h3>
+                                <p className="card-desc">{candle.description}</p>
+                                <div className="card-footer">
+                                    <span className="price">${candle.price}</span>
                                     <button
                                         onClick={() => alert(`View details for ${candle.name}`)}
-                                        className="bg-amber-500 text-white px-4 py-2 rounded hover:bg-amber-600 transition-colors"
+                                        className="btn-secondary"
                                     >
-                                        View Details
+                                        View
                                     </button>
                                 </div>
                             </div>
@@ -101,16 +80,12 @@ const LandingPage = () => {
             </section>
 
             {/* Footer */}
-            <footer className="bg-amber-100 py-8">
-                <div className="container mx-auto text-center">
-                    {/* <p className="text-amber-800">© 2024 Candlelight Creations. All Rights Reserved.</p> */}
-                    <div className="mt-4 space-x-4">
-                        <a href="#privacy" className="text-amber-700 hover:text-amber-900 transition-colors">Privacy Policy</a>
-                        <a href="#terms" className="text-amber-700 hover:text-amber-900 transition-colors">Terms of Service</a>
-                    </div>
+            <footer className="footer">
+                <div className="footer-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
                 </div>
             </footer>
-
         </div>
     );
 };
