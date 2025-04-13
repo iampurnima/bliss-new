@@ -34,17 +34,27 @@ const LandingPage = () => {
     ];
 
     return (
+        
         <div className="page">
-
-             
             
-
-            {/* Hero Section */}
+            
             <header className="hero">
                 <h1 className="hero-title">Handcrafted Candles for Every Mood</h1>
                 <p className="hero-sub">Discover our artisan candles that transform your space</p>
+                <p className="hero-sub">Pure Organic Himalayans Scented Candles</p>
                 <div className="logo-box">
-                     
+                <img 
+                        src="./src/assets/luxury.png"
+                        alt='logo'
+                        className='photo'
+                    />
+
+                <div className="eco-list">
+                    <p>100% Eco-Friendly</p>
+                    <p>Hand-Poured with Love</p>
+                    <p> Himalayan Botanicals</p>
+                </div>
+                    
                 </div>
                 <button
                     onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
@@ -53,6 +63,17 @@ const LandingPage = () => {
                     Shop Now
                 </button>
             </header>
+            <div className='Section'>
+                    <p className="Bliss">A FRESH PERSPECTIVE AND NEW FOUND JOY, IN FRAGRANCE.</p>
+                    <p className="Bliss">We are the simple moments.Made in Nepal and delivered to your door.</p>
+                    <div className='BlissButton'>
+                        <button className='aboutButton'>
+                        THIS IS BLISSE CANDLES
+                    </button>
+                    </div>
+                    
+                </div>
+            
 
             {/* Featured Products */}
             <section id="products" className="products">
@@ -78,14 +99,6 @@ const LandingPage = () => {
                     ))}
                 </div>
             </section>
-
-            {/* Footer */}
-            <footer className="footer">
-                <div className="footer-links">
-                    <a href="#privacy">Privacy Policy</a>
-                    <a href="#terms">Terms of Service</a>
-                </div>
-            </footer>
         </div>
     );
 };
