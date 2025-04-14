@@ -164,7 +164,7 @@ nav {
 
 /* Banner section is not modified as per your request */
 .banner {
-  background-color: #ffe0b2;
+  background-color: #466943;
   text-align: center;
   padding: 0.5rem;
   padding: 0.00rem 1rem;
@@ -174,7 +174,7 @@ nav {
 
 .offer {
   font-size: 0.9rem;
-  color: #8b4513;
+  color: #fdfdfb;
   font-weight: 500;
   margin: 0;
 }
@@ -308,11 +308,13 @@ nav {
   right: 20px; /* Adjust for mobile responsiveness */
   cursor: pointer;
   z-index: 1000;
+  
 }
 
 .cart-icon:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease;
+  
 }
 
 .search-container input {
