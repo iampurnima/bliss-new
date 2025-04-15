@@ -1,7 +1,11 @@
 import React from 'react';
 import "../components/styles/HomePage.css";
+import { useNavigate } from 'react-router-dom';
 
 const LandingPage = () => {
+    const navigate = useNavigate();
+    const handleNavigate = () => {
+        navigate('/about'); };
     const candles = [
         {
             id: 1,
@@ -66,8 +70,10 @@ const LandingPage = () => {
             <div className='Section'>
                     <p className="Bliss">A FRESH PERSPECTIVE AND NEW FOUND JOY, IN FRAGRANCE.</p>
                     <p className="Bliss">We are the simple moments.Made in Nepal and delivered to your door.</p>
-                    <div className='BlissButton'>
-                        <button className='aboutButton'>
+                    <div onClick={() => document.getElementById('About')?.scrollIntoView({ behavior: 'smooth' })}
+                    className='BlissButton'>
+                         <button className='aboutButton' onClick={handleNavigate}>
+                    
                         THIS IS BLISSE CANDLES
                     </button>
                     </div>

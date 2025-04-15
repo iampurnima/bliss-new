@@ -3,9 +3,13 @@ import { FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import "../components/styles/Navbar.css";
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
     const [searchTerm, setSearchTerm] = useState('');
+    const Nav = useNavigate();
+    const handleNav = () => {
+        navigate('/Subscribe'); };
 
   const handleSearch = () => {
     console.log("Searching for:", searchTerm);
@@ -14,7 +18,7 @@ const Navbar = () => {
     return (
         <nav>
              <div className="banner">
-                <p className="offer">🎉 15% off for new subscribers! 🎉</p>
+                <p onClick={handleNav} className="offer">🎉 15% off for new subscribers! 🎉</p>
             </div>
             
             <div className="nav-container">
@@ -27,10 +31,13 @@ const Navbar = () => {
                     </div>
                 <div className="nav-links">
                     <Link to="/" className="NavPages ">Home</Link>
-                    <Link to="/about" className="NavPages ">About</Link>
-                    <Link to="/contact" className="NavPages ">Contact</Link>
-                    <Link to="/contact" className="NavPages ">Studio</Link>
-                    <Link to="/contact" className="NavPages ">Fragrances</Link>
+                    <Link to="/Shop" className="NavPages ">Shop</Link>
+                    <Link to="/About" className="NavPages ">About</Link>
+                    <Link to="/Contact" className="NavPages ">Contact</Link>
+                    <Link to="/Studio" className="NavPages ">Studio</Link>
+                    <Link to="/Fragrances" className="NavPages ">Fragrances</Link>
+                    <Link to="/Subscribe" className="NavPages ">Subscribe</Link>
+
                     
                 </div>
                 <div className="search-container">
