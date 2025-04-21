@@ -197,10 +197,10 @@ nav {
 }
 
 .navbar-logo {
-  width: 120px;
+  width: 200px;
   height: auto;
   object-fit: contain;
-  height: 100px; /* Adjust based on your logo aspect ratio */
+  height: 250px; /* Adjust based on your logo aspect ratio */
   width: auto; /* Maintain aspect ratio */
   max-height: 200px; /* Prevent logo from being too large */
 }
@@ -291,7 +291,7 @@ nav {
   background-color: #ff9900;
   border: none;
   border-radius: 8px;
-  color: white;
+  color: rgb(176, 162, 162);
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s ease;

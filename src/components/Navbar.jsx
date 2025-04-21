@@ -9,7 +9,7 @@ const Navbar = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const Nav = useNavigate();
     const handleNav = () => {
-        navigate('/Subscribe'); };
+        navigate('/subscribe'); };
 
   const handleSearch = () => {
     console.log("Searching for:", searchTerm);
@@ -24,7 +24,7 @@ const Navbar = () => {
             <div className="nav-container">
             <div className="logo-container">
                     <img 
-                        src="./src/assets/BlisseLogo1.png"
+                        src="./src/assets/preview.png"
                         alt='logo'
                         className='navbar-logo'
                     />
@@ -34,9 +34,7 @@ const Navbar = () => {
                     <Link to="/Shop" className="NavPages ">Shop</Link>
                     <Link to="/About" className="NavPages ">About</Link>
                     <Link to="/Contact" className="NavPages ">Contact</Link>
-                    <Link to="/Studio" className="NavPages ">Studio</Link>
-                    <Link to="/Fragrances" className="NavPages ">Fragrances</Link>
-                    <Link to="/Subscribe" className="NavPages ">Subscribe</Link>
+                    <Link to="/subscribe" className="NavPages ">Subscribe</Link>
 
                     
                 </div>

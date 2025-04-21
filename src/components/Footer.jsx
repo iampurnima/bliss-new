@@ -18,9 +18,25 @@ const Footer = () => {
         <div className="footer-section">
           <h4 className="footer-title">Follow Us</h4>
           <div className="social-icons">
-            <FaFacebookF/>
-            <FaInstagram/>
-            <FaTiktok/>
+            <a
+              href="https://www.facebook.com/share/1W3Fq2UxtU/"
+              target="_blank"
+              rel="noopener noreferrer">
+                <FaFacebookF/>
+            </a>
+            <a
+              href="https://www.instagram.com/candlesbyblissy?igsh=MXV0aXhrNXRibGVkZA=="
+              target="_blank"
+              rel="noopener noreferrer">
+                <FaInstagram/>
+            </a>
+            <a
+              href="http://tiktok.com/@blisse06"
+              target="_blank"
+              rel="noopener noreferrer">
+                <FaTiktok/>
+            </a>
+            
           </div>
         </div>
 

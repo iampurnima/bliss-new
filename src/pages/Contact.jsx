@@ -25,9 +25,24 @@ const Contact = () => {
 
         <div className="contact-info">
           <h2>Our Contact Info</h2>
-          <p><strong>Email:</strong> hello@blisscandles.com</p>
-          <p><strong>Phone:</strong> +977-9864421904</p>
-          <p><strong>Location:</strong> Kathmandu, Nepal</p>
+          <p>
+            <strong>Email:</strong>{" "}
+            <a href="mailto:hello@blisscandles.com">hello@blisscandles.com</a>
+          </p>
+          <p>
+            <strong>Phone:</strong> {" "}
+            <a href="tel:+9779864421904">+977-9864421904</a>
+          </p>
+          <p>
+            <strong>Location:</strong> {" "}
+            <a
+              href="https://www.google.com/maps/place/Kathmandu,+Nepal"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Kathmandu, Nepal
+            </a>
+            </p>
           <p>Follow us on social media for the latest candle collections & tips! 🌿✨</p>
         </div>
       </div>

@@ -1,6 +1,8 @@
 import React from 'react';
 import "../components/styles/Shop.css";
 import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+
 
 const Shop = () => {
   const navigate = useNavigate();
@@ -52,6 +54,17 @@ const Shop = () => {
     }
   ];
   return (
+    <div className="category-scroll-menu">
+  {categories.map((cat, index) => (
+    <button
+      key={index}
+      className="category-tab"
+      onClick={() => navigate(`/shop/${cat.slug}`)}
+    >
+      {cat.name}
+    </button>
+  ))}
+
 
     <div className="shop-container">
       <div className="shop-hero">
@@ -67,6 +80,7 @@ const Shop = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };
