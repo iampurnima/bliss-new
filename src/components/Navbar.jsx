@@ -24,7 +24,7 @@ const Navbar = () => {
             <div className="nav-container">
             <div className="logo-container">
                     <img 
-                        src="./src/assets/preview.png"
+                        src="./src/assets/removelogo.png"
                         alt='logo'
                         className='navbar-logo'
                     />

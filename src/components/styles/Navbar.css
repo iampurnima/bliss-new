@@ -98,7 +98,7 @@ nav .container a:hover::after {
 .navbar-logo {
   height: 100px; /* Adjust based on your logo aspect ratio */
   width: auto; /* Maintain aspect ratio */
-  max-height: 200px; /* Prevent logo from being too large */
+  max-height: 100px; /* Prevent logo from being too large */
 }
 
 /* Alternative CSS using Grid */
@@ -197,10 +197,10 @@ nav {
 }
 
 .navbar-logo {
-  width: 200px;
+  width: 100px;
   height: auto;
   object-fit: contain;
-  height: 250px; /* Adjust based on your logo aspect ratio */
+  height: 100px; /* Adjust based on your logo aspect ratio */
   width: auto; /* Maintain aspect ratio */
   max-height: 200px; /* Prevent logo from being too large */
 }
